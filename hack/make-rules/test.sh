@@ -24,3 +24,4 @@ KUBEEDGE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd -P)"
 source "${KUBEEDGE_ROOT}/hack/lib/init.sh"
 
 kubeedge::golang::run_test "$@"
+echo 'test'
