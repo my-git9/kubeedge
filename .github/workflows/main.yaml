@@ -130,6 +130,14 @@ jobs:
 
       - run: make integrationtest
 
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: coverage.out
+          flags: unittests
+          fail_ci_if_error: true
+          verbose: true
+
   e2e_test:
     runs-on: ubuntu-18.04
     timeout-minutes: 30
